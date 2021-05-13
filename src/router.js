@@ -10,7 +10,9 @@ export default new Router({
     {
       path: "/r/:id",
       name: "room",
-      component: require("./views/room.vue").default,
+      redirect: to => {
+        window.location.href = `https://resync.tv/${to.params.id}`
+      },
     },
     {
       path: "/room/:id",
@@ -23,7 +25,8 @@ export default new Router({
     },
     {
       path: "/",
-      component: require("./views/frontpage.vue").default,
+      // component: require("./views/frontpage.vue").default,
+      redirect: () => (window.location.href = "https://resync.tv"),
     },
     {
       path: "/iframe",
@@ -31,7 +34,8 @@ export default new Router({
     },
     {
       path: "*",
-      redirect: "/",
+      // redirect: "/",
+      redirect: () => (window.location.href = "https://resync.tv"),
     },
     // {
     //   path: "/about",
