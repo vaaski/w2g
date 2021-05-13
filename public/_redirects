@@ -1,1 +1,4 @@
-/*   /index.html   200
+/r/* https://resync.tv/:splat 301
+/room/* https://resync.tv/:splat 301
+
+/* https://resync.tv 301

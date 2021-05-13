@@ -21,7 +21,8 @@ export default new Router({
     {
       path: "/signup",
       name: "signup",
-      component: require("./views/signup.vue").default,
+      // component: require("./views/signup.vue").default,
+      redirect: () => (window.location.href = "https://resync.tv"),
     },
     {
       path: "/",
